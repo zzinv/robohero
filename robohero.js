@@ -17,9 +17,9 @@ var controllerPM_time = [100,2900,2540,5250,560,5250,560,6400,4200]
 
 
 // 這三個list是分別對應的
-var controllerPMS = [1,2,3,4,5,6,7,8,27] ;
+var controllerPMS = [1,2,3,4,5,6,7,8,9,27] ;
 var controllerPMS_time = [2300, 3300, 4800, 3800, 6600, 9300, 2990, 3300, 19750, 2200] ;
-var pmsMotionNames = [ "Bow", "Pass", "Strength", "Attention", "Balance", "Warm-Up", "Clap", "Pray", "Dance","Fly"] ;
+var pmsMotionNames = [ "Bow", "Pass", "Strength", "Attention", "Balance", "Warm-Up", "Clap", "Pray", "Dance","飞翔"] ;
 
 
 var isRoboheroAlive = false ; // check robohero is alive or not
