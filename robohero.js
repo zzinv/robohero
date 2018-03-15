@@ -287,15 +287,15 @@ var controlServo = function( servo, value ) {
         blocks: [
             ['R', 'Find Robohero', 'findRobohero_ext'],
             [' ', 'RoboHero Address %s', 'setRoboheroUrl', robohero_url ],
-            ['w', '立正', 'motionStand'],
+            ['w', '立 正', 'motionStand'],
 
-            ['w', '前进', 'motionForward'],
-            ['w', '后退', 'motionBackward'],
-            ['w', '左移', 'motionMoveLeft'],
-            ['w', '右移', 'motionMoveRight'],
+            ['w', '前 进', 'motionForward'],
+            ['w', '后 退', 'motionBackward'],
+            ['w', '左 移', 'motionMoveLeft'],
+            ['w', '右 移', 'motionMoveRight'],
 
-            ['w', '右转', 'motionTurnRight'],
-            ['w', '左转', 'motionTurnLeft'],
+            ['w', '右 转', 'motionTurnRight'],
+            ['w', '左 转', 'motionTurnLeft'],
 
             ['w', '仰面站立', 'motionStandUp'],
             ['w', '俯面起身', 'motionGetUp'],
