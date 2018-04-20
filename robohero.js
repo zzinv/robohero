@@ -19,7 +19,7 @@ var controllerPM_time = [100,2900,2540,5250,560,5250,560,6400,4200]
 // 這三個list是分別對應的
 var controllerPMS = [1,2,3,4,5,6,7,8,9,22,23,24,25,26,27,28,30,31,32,33,34,35] ;
 var controllerPMS_time = [2300, 3300, 4800, 3800, 6600, 9300, 2990, 3300, 19750, 1700, 2180, 1662, 16290, 2424, 2200, 2738, 600, 200, 200, 200, 500, 1123] ;
-var pmsMotionNames = [ "鞠躬", "通过", "强壮", "注意", "平衡", "热身", "拍手", "祈祷", "跳舞","俯身","坐下","摇头","扭腰","握手","飞翔","挠头","俯卧撑","抬左手","抬右手","抬双手","胜利","仰卧起坐"] ;
+var pmsMotionNames = [ "鞠躬", "通过", "强壮", "注意", "平衡", "热身", "拍手", "祈祷", "跳舞","俯身","坐下","摇头","扭腰","握手","飞翔","挠头","俯卧撑","抬左手","抬右手","抬双手","胜利","仰卧起坐","前进起始","迈右腿","迈左腿","收腿"] ;
 
 
 var isRoboheroAlive = false ; // check robohero is alive or not
@@ -287,15 +287,15 @@ var controlServo = function( servo, value ) {
         blocks: [
             ['R', 'Find Robohero', 'findRobohero_ext'],
             [' ', 'RoboHero Address %s', 'setRoboheroUrl', robohero_url ],
-            ['w', '立 正', 'motionStand'],
+            ['w', '立正', 'motionStand'],
 
-            ['w', '前 进', 'motionForward'],
-            ['w', '后 退', 'motionBackward'],
-            ['w', '左 移', 'motionMoveLeft'],
-            ['w', '右 移', 'motionMoveRight'],
+            ['w', '前进', 'motionForward'],
+            ['w', '后退', 'motionBackward'],
+            ['w', '左移', 'motionMoveLeft'],
+            ['w', '右移', 'motionMoveRight'],
 
-            ['w', '右 转', 'motionTurnRight'],
-            ['w', '左 转', 'motionTurnLeft'],
+            ['w', '右转', 'motionTurnRight'],
+            ['w', '左转', 'motionTurnLeft'],
 
             ['w', '仰面站立', 'motionStandUp'],
             ['w', '俯面起身', 'motionGetUp'],
