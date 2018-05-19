@@ -116,7 +116,7 @@ var controllerServo = function( arr, callback) {
   console.log("controllerServo func run") ;
   var url = robohero_url + "online?" ;
   url = url + "m0=" + arr[j] ;
-  for ( var j = 0 ; j <= 16 ; j++ ) {
+  for ( var j = 1 ; j <= 16 ; j++ ) {
       url = url + "&m" + j + "=" + arr[j] ;
   }
   url = url + "&t1=" + arr[17] ;
