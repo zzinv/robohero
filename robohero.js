@@ -115,22 +115,21 @@ var findRobohero = function(callback) {
 var controllerServo = function( arr, callback) {
   console.log("controllerServo func run") ;
   var url = robohero_url + "online?" ;
-  url = url + "m0=" + arr[j] ;
+  url = url + "m0=" + arr[0] ;
   for ( var j = 1 ; j <= 16 ; j++ ) {
       url = url + "&m" + j + "=" + arr[j] ;
   }
   url = url + "&t1=" + arr[17] ;
 
+  console.log("Control Servo raw url=" + url ) ;
   $.ajax({
     url: url,
-    timeout: 500,
-    type: 'get',
-    success: function(data) {
-      console.log( "control servo return" ) ;
-      if ( callback != undefined ) {
-          callback() ;
-      }
-
+    timeout: 1000,
+    type: 'get'
+  }).done(function(data){
+    console.log("controlServo Done data= " + data)
+    if ( callback != undefined ) {
+        callback() ;
     }
   });
 }
@@ -263,7 +262,7 @@ var controlServo = function( servo, value ) {
 
         try {
             var arr = JSON.parse(line);
-            console.log("get arr, run it,") ;
+            console.log("get executeFrame Arr, run it:") ;
             console.log( arr.arr ) ;
             controllerServo( arr.arr, callback ) ;
         } catch(e) {
