@@ -212,10 +212,10 @@ var controlServo = function( servo, value ) {
 
 
     ext.motionTurnRight = function(callback) {
-        runPMcallback( 3, callback) ;
+        runPMcallback( 4, callback) ;
     };
     ext.motionTurnLeft = function(callback) {
-        runPMcallback( 4, callback) ;
+        runPMcallback( 3, callback) ;
     };
 
 
