@@ -310,7 +310,7 @@ var controlServo = function( servo, value ) {
             */
 
             ['w', 'Execute Frame: %s', 'executeFrame', "135, 135, 135, 135, 135, 135, 200, 135, 135, 60, 135, 135, 135, 135, 135, 135, 90 ,500" ],
-            ['w', 'Execute Motion (JSON): %s', 'executeMotion', "" ],
+            /*['w', 'Execute Motion (JSON): %s', 'executeMotion', "" ],*/
             [' ', 'Set Servo, index: %n (0~16), degree: %n (0~270)', 'setServo', 0, 135]
 
         ],
