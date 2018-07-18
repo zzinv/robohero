@@ -242,9 +242,9 @@ function sleep(numberMillis) {
           sleep(4000);
           runPMcallback( 5, callback) ;
           sleep(1000);
-          runPMScallback( 2, callback ) ;
+          runPMcallback( 2, callback ) ;
           sleep(5000);
-          runPMScallback( 2, callback ) ;
+          runPMcallback( 2, callback ) ;
     };
   
   
@@ -352,7 +352,7 @@ function sleep(numberMillis) {
             ['w', '俯面起身', 'motionGetUp'],
           
             ['w', '走四方', 'motionSquare'],
-            ['w', '跳舞SHOW', 'motionDanceshow'],
+            ['w', '跳舞show', 'motionDanceshow'],
 
             ['w', '进阶动作 %m.pmsMotion', 'runPmsByName', pmsMotionNames[0] + "" ],
 
