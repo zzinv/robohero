@@ -307,6 +307,7 @@ var controlServo = function( servo, value ) {
             [' ', 'RoboHero Address %s', 'setRoboheroUrl', robohero_url ],
             ['w', '立正', 'motionStand'],
 
+            ['w', '走四方', 'motionsquare'],
             ['w', '前进', 'motionForward'],
             ['w', '后退', 'motionBackward'],
             ['w', '左移', 'motionMoveLeft'],
