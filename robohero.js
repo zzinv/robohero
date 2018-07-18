@@ -351,7 +351,7 @@ function sleep(numberMillis) {
             ['w', '仰面站立', 'motionStandUp'],
             ['w', '俯面起身', 'motionGetUp'],
           
-            ['w', '走四方', 'motionsquare'],
+            ['w', '走四方', 'motionSquare'],
             ['w', '跳舞SHOW', 'motionDanceshow'],
 
             ['w', '进阶动作 %m.pmsMotion', 'runPmsByName', pmsMotionNames[0] + "" ],
