@@ -199,17 +199,19 @@ var controlServo = function( servo, value ) {
    ext.motionsquare = function(callback) {
         for(i=0;i<3;i++){
         runPMcallback( 1, callback) ;
-        timeout: 300;
+        timeout: 5000;
         runPMcallback( 1, callback) ;
-        timeout: 300;
+        timeout: 5000;
         runPMcallback( 3, callback) ;
-        timeout: 300;
+        timeout: 8500;
         runPMcallback( 3, callback) ;
-        timeout: 300;
+        timeout: 8500;
         runPMcallback( 3, callback) ;
-        timeout: 300;}
+        timeout: 8500;}
         runPMcallback( 1, callback) ;
+        timeout: 5000;
         runPMcallback( 1, callback) ;
+        timeout: 5000;
         runPMScallback( 1, callback ) ;
     };
   
