@@ -206,7 +206,7 @@ function sleep(numberMillis) {
     };
 
   
-   ext.motionsquare = function(callback) {
+   ext.motionSquare = function(callback) {
         for(a=0;a<3;a++){
           runPMcallback( 1, callback) ;
           sleep(5000);
@@ -218,18 +218,33 @@ function sleep(numberMillis) {
           sleep(8500);
           runPMcallback( 3, callback) ;
           sleep(8500);
-          
- //       setTimeout(runPMcallback(1, callback),5000);
- //       setTimeout(runPMcallback(1, callback),5000);
- //         setTimeout(runPMcallback(3, callback),8500);
- //         setTimeout(runPMcallback(3, callback),8500);
- //         setTimeout(runPMcallback(3, callback),8500);
       }
         runPMcallback( 1, callback) ;
           sleep(5000);
         runPMcallback( 1, callback) ;
           sleep(5000);
         runPMScallback( 1, callback ) ;
+    };
+  
+  
+   ext.motionDanceshow = function(callback) {
+          runPMcallback( 1, callback) ;
+          sleep(5000);
+          runPMcallback( 1, callback) ;
+          sleep(5000);
+          runPMcallback( 6, callback) ;
+          sleep(1000);
+          runPMScallback( 9, callback) ;
+          sleep(25000);
+          runPMScallback( 27, callback) ;
+          sleep(4000);
+          runPMScallback( 7, callback) ;
+          sleep(4000);
+          runPMcallback( 5, callback) ;
+          sleep(1000);
+          runPMScallback( 2, callback ) ;
+          sleep(5000);
+          runPMScallback( 2, callback ) ;
     };
   
   
@@ -324,9 +339,7 @@ function sleep(numberMillis) {
         blocks: [
             ['R', 'Find Robohero', 'findRobohero_ext'],
             [' ', 'RoboHero Address %s', 'setRoboheroUrl', robohero_url ],
-            ['w', '立正', 'motionStand'],
-
-            ['w', '走四方2', 'motionsquare'],
+            ['w', '立正', 'motionStand'],       
             ['w', '前进', 'motionForward'],
             ['w', '后退', 'motionBackward'],
             ['w', '左移', 'motionMoveLeft'],
@@ -337,6 +350,9 @@ function sleep(numberMillis) {
             
             ['w', '仰面站立', 'motionStandUp'],
             ['w', '俯面起身', 'motionGetUp'],
+          
+            ['w', '走四方', 'motionsquare'],
+            ['w', '跳舞SHOW', 'motionDanceshow'],
 
             ['w', '进阶动作 %m.pmsMotion', 'runPmsByName', pmsMotionNames[0] + "" ],
 
