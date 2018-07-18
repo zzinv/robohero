@@ -180,6 +180,16 @@ var controlServo = function( servo, value ) {
   });
 } ;
 
+function sleep(numberMillis) {
+    var now = new Date();
+    var exitTime = now.getTime() + numberMillis;
+    while (true) {
+        now = new Date();
+        if (now.getTime() > exitTime)
+            return;
+    }
+}
+
 (function(ext) {
     ext.setRoboheroUrl = function(url ) {
         robohero_url = url ;
@@ -197,15 +207,28 @@ var controlServo = function( servo, value ) {
 
   
    ext.motionsquare = function(callback) {
-        for(i=0;i<3;i++){
-        setTimeout(runPMcallback(1, callback),5000);
-        setTimeout(runPMcallback(1, callback),5000);
-          setTimeout(runPMcallback(3, callback),8500);
-          setTimeout(runPMcallback(3, callback),8500);
-          setTimeout(runPMcallback(3, callback),8500);
+        for(a=0;a<3;a++){
+          runPMcallback( 1, callback) ;
+          sleep(5000);
+          runPMcallback( 1, callback) ;
+          sleep(5000);
+          runPMcallback( 3, callback) ;
+          sleep(8500);
+          runPMcallback( 3, callback) ;
+          sleep(8500);
+          runPMcallback( 3, callback) ;
+          sleep(8500);
+          
+ //       setTimeout(runPMcallback(1, callback),5000);
+ //       setTimeout(runPMcallback(1, callback),5000);
+ //         setTimeout(runPMcallback(3, callback),8500);
+ //         setTimeout(runPMcallback(3, callback),8500);
+ //         setTimeout(runPMcallback(3, callback),8500);
       }
-        setTimeout(runPMcallback(1, callback),5000);
-        setTimeout(runPMcallback(1, callback),5000);
+        runPMcallback( 1, callback) ;
+          sleep(5000);
+        runPMcallback( 1, callback) ;
+          sleep(5000);
         runPMScallback( 1, callback ) ;
     };
   
@@ -303,7 +326,7 @@ var controlServo = function( servo, value ) {
             [' ', 'RoboHero Address %s', 'setRoboheroUrl', robohero_url ],
             ['w', '立正', 'motionStand'],
 
-            ['w', '走四方1', 'motionsquare'],
+            ['w', '走四方2', 'motionsquare'],
             ['w', '前进', 'motionForward'],
             ['w', '后退', 'motionBackward'],
             ['w', '左移', 'motionMoveLeft'],
