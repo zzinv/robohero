@@ -249,10 +249,10 @@ function sleep(numberMillis) {
   
   
     ext.motionForward = function(callback) {
-        runPMcallback( 1, callback) ;
+        runPMcallback( 0, callback) ;
     };
     ext.motionBackward = function(callback) {
-        runPMcallback( 2, callback) ;
+        runPMcallback( 1, callback) ;
     };
 
     ext.motionMoveLeft = function(callback) {
